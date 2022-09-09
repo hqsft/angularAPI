@@ -1,0 +1,617 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AngularApi",
+		"_postman_id": "0112cb3a-eccb-3b54-1cbf-49943f256547",
+		"description": "Angular Test Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "10.10.0.103",
+			"description": "",
+			"item": [
+				{
+					"name": "SignIN",
+					"request": {
+						"url": "http://10.10.0.103:8080/angularAPI/api/auth/signin",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"santosh.sarkar@telecommand.com\",\n\t\"sub\": \"1234\",\n\t\"fname\": \"Santosh\",\n\t\"lname\": \"Sarkar\",\n\t\"mname\":\"Kumar\"\n}"
+						},
+						"description": ""
+					},
+					"response": [
+						{
+							"id": "0e797fd8-9227-4045-bb47-f124dbda23f6",
+							"name": "SignIN",
+							"originalRequest": {
+								"url": "http://10.10.0.103:8080/angularAPI/api/auth/signin",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"email\": \"santosh.sarkar@telecommand.com\",\n\t\"sub\": \"1234\",\n\t\"fname\": \"Santosh\",\n\t\"lname\": \"Sarkar\",\n\t\"mname\":\"Kumar\"\n}"
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"_postman_previewtype": "text",
+							"header": [
+								{
+									"name": "access-control-allow-origin",
+									"key": "access-control-allow-origin",
+									"value": "*",
+									"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+								},
+								{
+									"name": "cache-control",
+									"key": "cache-control",
+									"value": "no-cache, no-store, max-age=0, must-revalidate",
+									"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+								},
+								{
+									"name": "connection",
+									"key": "connection",
+									"value": "keep-alive",
+									"description": "Options that are desired for the connection"
+								},
+								{
+									"name": "content-type",
+									"key": "content-type",
+									"value": "application/json",
+									"description": "The mime type of this content"
+								},
+								{
+									"name": "date",
+									"key": "date",
+									"value": "Sun, 04 Sep 2022 06:24:41 GMT",
+									"description": "The date and time that the message was sent"
+								},
+								{
+									"name": "expires",
+									"key": "expires",
+									"value": "0",
+									"description": "Gives the date/time after which the response is considered stale"
+								},
+								{
+									"name": "keep-alive",
+									"key": "keep-alive",
+									"value": "timeout=20",
+									"description": "Custom header"
+								},
+								{
+									"name": "pragma",
+									"key": "pragma",
+									"value": "no-cache",
+									"description": "Implementation-specific headers that may have various effects anywhere along the request-response chain."
+								},
+								{
+									"name": "transfer-encoding",
+									"key": "transfer-encoding",
+									"value": "chunked",
+									"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+								},
+								{
+									"name": "vary",
+									"key": "vary",
+									"value": "Origin, Access-Control-Request-Method, Access-Control-Request-Headers",
+									"description": "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server."
+								},
+								{
+									"name": "x-content-type-options",
+									"key": "x-content-type-options",
+									"value": "nosniff",
+									"description": "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type"
+								},
+								{
+									"name": "x-frame-options",
+									"key": "x-frame-options",
+									"value": "DENY",
+									"description": "Clickjacking protection: \"deny\" - no rendering within a frame, \"sameorigin\" - no rendering if origin mismatch"
+								},
+								{
+									"name": "x-xss-protection",
+									"key": "x-xss-protection",
+									"value": "1; mode=block",
+									"description": "Cross-site scripting (XSS) filter"
+								}
+							],
+							"cookie": [],
+							"responseTime": 810,
+							"body": "{\"id\":1,\"username\":null,\"email\":\"santosh.sarkar@telecommand.com\",\"roles\":[],\"tokenType\":\"Bearer\",\"accessToken\":\"eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjIyNzI2ODEsImV4cCI6MTY2MjM1OTA4MX0.QyYqaTb-QkDe3zf9nOt9f7x4by8dZSXqt99F150BsZahv8kJtJsNQ1LoR2JfUfVBEA3c23ZevlNHuHoUhrpa-g\"}"
+						}
+					]
+				},
+				{
+					"name": "Post",
+					"request": {
+						"url": "http://10.10.0.103:8080/angularAPI/api/post/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI0NDM0NTEsImV4cCI6MTY2MjUyOTg1MX0.HjfuyNxqrsV73WuANfWkgDGJUi3bqEK55hYzLkMdvhf2aWZQcrWqfJ_equYach7qbyiZyIS9EYZsTYMyvjxnxQ",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "SavePostWithFile",
+					"request": {
+						"url": "http://10.10.0.103:8080/angularAPI/api/post/save",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI1Mjk4NjEsImV4cCI6MTY2MjYxNjI2MX0.2N_g70wp-nj5gqEgFWjZkcpY1yPEhn5ZNVS6BY5gjBOMGALt61ezpMSqKdHzxvmU9kWFCEjfRzu5OtM-PUWubw",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Title test 1",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Body Test 1",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "published",
+									"value": "true",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "files",
+									"description": "",
+									"type": "file",
+									"src": "Sample Project API Documentation.pdf"
+								},
+								{
+									"key": "project",
+									"value": "Project 3",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "organisation",
+									"value": "Organisation 3",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test3@gmail.com",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PostUpdate",
+					"request": {
+						"url": "http://10.10.0.103:8080/angularAPI/api/post/3",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI0NDM0NTEsImV4cCI6MTY2MjUyOTg1MX0.HjfuyNxqrsV73WuANfWkgDGJUi3bqEK55hYzLkMdvhf2aWZQcrWqfJ_equYach7qbyiZyIS9EYZsTYMyvjxnxQ",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Title 3\",\n\t\"body\": \"Body 3 \",\n\t\"published\": true\n\t\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update_With_File",
+					"request": {
+						"url": "http://10.10.0.103:8080/angularAPI/api/post/update/14",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI1NDk1ODEsImV4cCI6MTY2MjYzNTk4MX0.cPPm0SeO-QkD0USFO97LreexTznIXZwQ_U8m_rO4nxn9lFjHQnSz4ASLpiTBrlsYxopnCRpm--fJ543x-hJWaA",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Update title",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Body Update",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "project",
+									"value": "Project Update ",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "organisation",
+									"value": "Org Update",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "santosh@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "published",
+									"value": "false",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "files",
+									"description": "",
+									"type": "file",
+									"src": "fb_Business-Manager.docx"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "localhost",
+			"description": "",
+			"item": [
+				{
+					"name": "SignIN",
+					"request": {
+						"url": "http://localhost:8080/angularAPI/api/auth/signin",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"santosh.sarkar@telecommand.com\",\n\t\"sub\": \"1234\",\n\t\"fname\": \"Santosh\",\n\t\"lname\": \"Sarkar\",\n\t\"mname\":\"Kumar\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Test",
+					"request": {
+						"url": "http://localhost:8080/angularAPI/api/test/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjIwMjk1NTQsImV4cCI6MTY2MjExNTk1NH0.49NIn0XpvJrSLgFP2bhCPV50KkkJNEH_5Yn7QXDI9N0PsBDrT_Kvs5ZnhzVkRQSiSTjf3qauCEeHP_bbdWRDHQ",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"request": {
+						"url": "http://localhost:8080/angularAPI/api/post/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI2OTEzNjksImV4cCI6MTY2Mjc3Nzc2OX0.RarJB3sdn2eM0fW2UZHQI5Pr8gtKGZpyvCLSU-VFupQPxb5uLnMfNOMM5GTXSx_gT8v9CysdO4AYEhtGg6c5fg",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PostById",
+					"request": {
+						"url": "http://localhost:8080/angularAPI/api/post/1",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjIwOTY1ODYsImV4cCI6MTY2MjE4Mjk4Nn0.lDyAoJPPh_apOjNn4xVYie9Zif8miqMcmQC5GbEZCLsiUXm6sc5BcyYgfowl-ZIhNHyduZ3bvTWV9teDrLFuVA",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PostSave",
+					"request": {
+						"url": "http://localhost:8080/angularAPI/api/post/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI0NDM0NTEsImV4cCI6MTY2MjUyOTg1MX0.HjfuyNxqrsV73WuANfWkgDGJUi3bqEK55hYzLkMdvhf2aWZQcrWqfJ_equYach7qbyiZyIS9EYZsTYMyvjxnxQ",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Title ccc\",\n\t\"body\": \"1234\",\n\t\"email\": null,\n    \"project\": \"pp\",\n    \"organisation\": \"ll\",\n\t\"published\": false\n\t\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PostUpdate",
+					"request": {
+						"url": "http://localhost:8080/angularAPI/api/post/3",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjIwOTY1ODYsImV4cCI6MTY2MjE4Mjk4Nn0.lDyAoJPPh_apOjNn4xVYie9Zif8miqMcmQC5GbEZCLsiUXm6sc5BcyYgfowl-ZIhNHyduZ3bvTWV9teDrLFuVA",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"title\": \"Title 3\",\n\t\"body\": \"Body 3 \",\n\t\"published\": true\n\t\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "SavePostWithFile",
+					"request": {
+						"url": "http://localhost:8080/angularAPI/api/post/save",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI1NDk1ODEsImV4cCI6MTY2MjYzNTk4MX0.cPPm0SeO-QkD0USFO97LreexTznIXZwQ_U8m_rO4nxn9lFjHQnSz4ASLpiTBrlsYxopnCRpm--fJ543x-hJWaA",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "vv",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "vv",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "published",
+									"value": "true",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "files",
+									"description": "",
+									"type": "file",
+									"src": "nippon.pdf",
+									"disabled": true
+								},
+								{
+									"key": "project",
+									"value": "vv",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "organisation",
+									"value": "Organisation 3ssvv",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test3@gmail.comvv",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "DownloadFile",
+					"request": {
+						"url": "http://localhost:8080/angularAPI/api/post/file/3/nippon.pdf",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI1NDk1ODEsImV4cCI6MTY2MjYzNTk4MX0.cPPm0SeO-QkD0USFO97LreexTznIXZwQ_U8m_rO4nxn9lFjHQnSz4ASLpiTBrlsYxopnCRpm--fJ543x-hJWaA",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "PostFiles",
+					"request": {
+						"url": "http://localhost:8080/angularAPI/api/post/post_files",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI2OTEzNjksImV4cCI6MTY2Mjc3Nzc2OX0.RarJB3sdn2eM0fW2UZHQI5Pr8gtKGZpyvCLSU-VFupQPxb5uLnMfNOMM5GTXSx_gT8v9CysdO4AYEhtGg6c5fg",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update_With_File",
+					"request": {
+						"url": "http://localhost:8080/angularAPI/api/post/update/3",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI2MzYwNDUsImV4cCI6MTY2MjcyMjQ0NX0.b0RKDm_OVjSiupOUygfPLRhi0GnUIw_iF-UyIp-78bDAj2iHAAR_m-5NpRo9ewcWE6oT1iviGfGi4qdTdmBvrA",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Update title",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Body Update",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "project",
+									"value": "Project Update ",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "organisation",
+									"value": "Org Update",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "santosh@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "published",
+									"value": "false",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "files",
+									"description": "",
+									"type": "file",
+									"src": "nippon_01-2021_to_06-2022.pdf"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePost",
+					"request": {
+						"url": "http://localhost:8080/angularAPI/api/post/3",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI2OTEzNjksImV4cCI6MTY2Mjc3Nzc2OX0.RarJB3sdn2eM0fW2UZHQI5Pr8gtKGZpyvCLSU-VFupQPxb5uLnMfNOMM5GTXSx_gT8v9CysdO4AYEhtGg6c5fg",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
