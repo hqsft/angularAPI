@@ -8,6 +8,7 @@ import hcd.ca.gov.nofa.entities.PostFiles;
 import java.util.List;
 import javax.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 /**
  *
@@ -15,10 +16,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
  */
 public interface PostFilesRepository extends JpaRepository<PostFiles, Long> {
 
-    /*
-    List<PostFiles> findByPostFilesId(Long postId);
+    List<PostFiles> findByPostId(Long postId);
+
     @Transactional
-    void deleteByPostId(long postId);
-*/
+    void deleteByPostId(Long postId);
+    
+    @Query(value = "SELECT id FROM post_files where post_id = ?1 ", nativeQuery = true)
+    Long getIdFromPostId(Long postId);
 
 }

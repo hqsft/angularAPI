@@ -182,9 +182,7 @@ public class PostController {
 
         try {
             System.out.println("Inside Try");
-            post.setId(id);
-
-            PostFiles postFile = new PostFiles();
+            post.setId(id);           
 
             String fileName = "";
             if (multipartFile != null) {
@@ -194,13 +192,18 @@ public class PostController {
 
             }
             Post savedPost = postRepository.save(post);
-
+            
+            
             if (multipartFile != null) {
-                postFile.setPost(post);
-                postFile.setId(savedPost.getId());
+                PostFiles postFile = new PostFiles();
+                postFile.setPost(savedPost);     
+                Long postFileId=postFilesRepository.getIdFromPostId(savedPost.getId());
+                System.out.println("PostFiles: "+postFileId);               
+                
+                postFile.setId(postFileId);
                 postFile.setFileName(fileName);
-                PostFiles savePostFiles = postFilesRepository.save(postFile);
-
+                PostFiles savePostFiles = postFilesRepository.save(postFile);                
+                        
                 String uploadDir = EXTERNAL_FILE_PATH + "files/" + savedPost.getId();
                 FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
             }
