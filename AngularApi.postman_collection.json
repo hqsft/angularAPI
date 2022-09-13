@@ -31,7 +31,7 @@
 					},
 					"response": [
 						{
-							"id": "0e797fd8-9227-4045-bb47-f124dbda23f6",
+							"id": "a0251ddc-55fe-4aae-8b95-54c1517397c6",
 							"name": "SignIN",
 							"originalRequest": {
 								"url": "http://10.10.0.103:8080/angularAPI/api/auth/signin",
@@ -146,7 +146,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI0NDM0NTEsImV4cCI6MTY2MjUyOTg1MX0.HjfuyNxqrsV73WuANfWkgDGJUi3bqEK55hYzLkMdvhf2aWZQcrWqfJ_equYach7qbyiZyIS9EYZsTYMyvjxnxQ",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI2ODIyNjAsImV4cCI6MTY2Mjc2ODY2MH0.Qx5o1HAvY3f8TAAKDjQf0rBID2oMBAJx9fbEzQ4EHeQf8xP5iB3k3vwErRi0tuCaM52OI9X2c1CQB2dOJSf_rQ",
 								"description": ""
 							}
 						],
@@ -246,12 +246,12 @@
 				{
 					"name": "Update_With_File",
 					"request": {
-						"url": "http://10.10.0.103:8080/angularAPI/api/post/update/14",
+						"url": "https://csacangular.hsoftcloud.com/angularAPI/api/post/update/20",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI1NDk1ODEsImV4cCI6MTY2MjYzNTk4MX0.cPPm0SeO-QkD0USFO97LreexTznIXZwQ_U8m_rO4nxn9lFjHQnSz4ASLpiTBrlsYxopnCRpm--fJ543x-hJWaA",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI2ODIyNjAsImV4cCI6MTY2Mjc2ODY2MH0.Qx5o1HAvY3f8TAAKDjQf0rBID2oMBAJx9fbEzQ4EHeQf8xP5iB3k3vwErRi0tuCaM52OI9X2c1CQB2dOJSf_rQ",
 								"description": ""
 							}
 						],
@@ -296,11 +296,36 @@
 								},
 								{
 									"key": "files",
+									"value": "",
 									"description": "",
-									"type": "file",
-									"src": "fb_Business-Manager.docx"
+									"type": "file"
 								}
 							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Product",
+					"request": {
+						"url": "http://10.10.0.103:8080/angularAPI/api/product",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI4MjU0NzksImV4cCI6MTY2MjkxMTg3OX0.jt9jksLnZEbjatsgrDK41g3BurplQ14ttYxA9ZxQtpKbmF5AlHLJmShM_R-tyoA_0nqts5R3yidyOSjRnL4zUw",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\":\"P2_update\",\n\t\"price\":30.25\n}"
 						},
 						"description": ""
 					},
@@ -357,7 +382,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI2OTEzNjksImV4cCI6MTY2Mjc3Nzc2OX0.RarJB3sdn2eM0fW2UZHQI5Pr8gtKGZpyvCLSU-VFupQPxb5uLnMfNOMM5GTXSx_gT8v9CysdO4AYEhtGg6c5fg",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI5ODg0ODAsImV4cCI6MTY2MzA3NDg4MH0.RqIqyveZeXKbCmDnJDQKQai6dJln_ZIZ3Y0KT0udkg8fSupdmJa0Fj4cwzLfDTdmEp45nSE64QDo5vfQJgsRXQ",
 								"description": ""
 							}
 						],
@@ -441,7 +466,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI1NDk1ODEsImV4cCI6MTY2MjYzNTk4MX0.cPPm0SeO-QkD0USFO97LreexTznIXZwQ_U8m_rO4nxn9lFjHQnSz4ASLpiTBrlsYxopnCRpm--fJ543x-hJWaA",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI3MTY2ODAsImV4cCI6MTY2MjgwMzA4MH0.8zhFDgZccH2FIlxvMs7CRDBO0mVJhmuLNBPrUejOAhHvi7b4mzvUy3xcOVi0GjE6GBKw8mj0RwrSIheVG3y5NQ",
 								"description": ""
 							}
 						],
@@ -450,13 +475,13 @@
 							"formdata": [
 								{
 									"key": "title",
-									"value": "vv",
+									"value": "New Post with File",
 									"description": "",
 									"type": "text"
 								},
 								{
 									"key": "body",
-									"value": "vv",
+									"value": "New Post Body",
 									"description": "",
 									"type": "text"
 								},
@@ -470,12 +495,11 @@
 									"key": "files",
 									"description": "",
 									"type": "file",
-									"src": "nippon.pdf",
-									"disabled": true
+									"src": "nippon_01-2021_to_06-2022.pdf"
 								},
 								{
 									"key": "project",
-									"value": "vv",
+									"value": "New Project",
 									"description": "",
 									"type": "text"
 								},
@@ -534,12 +558,12 @@
 				{
 					"name": "Update_With_File",
 					"request": {
-						"url": "http://localhost:8080/angularAPI/api/post/update/3",
+						"url": "http://localhost:8080/angularAPI/api/post/update/4",
 						"method": "POST",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI2MzYwNDUsImV4cCI6MTY2MjcyMjQ0NX0.b0RKDm_OVjSiupOUygfPLRhi0GnUIw_iF-UyIp-78bDAj2iHAAR_m-5NpRo9ewcWE6oT1iviGfGi4qdTdmBvrA",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjMwNTIyNjgsImV4cCI6MTY2MzEzODY2OH0.QMhmYwpqSyNlVYK_5uux_IphMBnGOh-lqLM_zOJooEaS0-PRk8yu2V7gK3_gHmgp3PNDsUxOPNgKMELtyyicJQ",
 								"description": ""
 							}
 						],
@@ -548,13 +572,233 @@
 							"formdata": [
 								{
 									"key": "title",
-									"value": "Update title",
+									"value": "Update title4",
 									"description": "",
 									"type": "text"
 								},
 								{
 									"key": "body",
-									"value": "Body Update",
+									"value": "Body Update4",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "project",
+									"value": "Project Update 5",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "organisation",
+									"value": "Org Update6",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "santosh@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "published",
+									"value": "false",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "files",
+									"description": "",
+									"type": "file",
+									"src": "nippon_01-2021_to_06-2022.pdf"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "DeletePost",
+					"request": {
+						"url": "http://localhost:8080/angularAPI/api/post/23",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI2OTEzNjksImV4cCI6MTY2Mjc3Nzc2OX0.RarJB3sdn2eM0fW2UZHQI5Pr8gtKGZpyvCLSU-VFupQPxb5uLnMfNOMM5GTXSx_gT8v9CysdO4AYEhtGg6c5fg",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Product",
+					"request": {
+						"url": "http://localhost:8080/angularAPI/api/product",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI4MjU0NzksImV4cCI6MTY2MjkxMTg3OX0.jt9jksLnZEbjatsgrDK41g3BurplQ14ttYxA9ZxQtpKbmF5AlHLJmShM_R-tyoA_0nqts5R3yidyOSjRnL4zUw",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CSAC",
+			"description": "",
+			"item": [
+				{
+					"name": "GetAll-Post",
+					"request": {
+						"url": "https://csacangular.hsoftcloud.com/angularAPI/api/post/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI2ODIyNjAsImV4cCI6MTY2Mjc2ODY2MH0.Qx5o1HAvY3f8TAAKDjQf0rBID2oMBAJx9fbEzQ4EHeQf8xP5iB3k3vwErRi0tuCaM52OI9X2c1CQB2dOJSf_rQ",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GetById-Post",
+					"request": {
+						"url": "https://csacangular.hsoftcloud.com/angularAPI/api/post/10",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI2ODIyNjAsImV4cCI6MTY2Mjc2ODY2MH0.Qx5o1HAvY3f8TAAKDjQf0rBID2oMBAJx9fbEzQ4EHeQf8xP5iB3k3vwErRi0tuCaM52OI9X2c1CQB2dOJSf_rQ",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "SignIN",
+					"request": {
+						"url": "https://csacangular.hsoftcloud.com/angularAPI/api/auth/signin",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"santosh.sarkar@telecommand.com\",\n\t\"sub\": \"1234\",\n\t\"fname\": \"Santosh\",\n\t\"lname\": \"Sarkar\",\n\t\"mname\":\"Kumar\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "SavePostWithFile",
+					"request": {
+						"url": "https://csacangular.hsoftcloud.com/angularAPI/api/post/save",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI2ODIyNjAsImV4cCI6MTY2Mjc2ODY2MH0.Qx5o1HAvY3f8TAAKDjQf0rBID2oMBAJx9fbEzQ4EHeQf8xP5iB3k3vwErRi0tuCaM52OI9X2c1CQB2dOJSf_rQ",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Title 1",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Body 1",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "published",
+									"value": "true",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "files",
+									"value": "",
+									"description": "",
+									"type": "file"
+								},
+								{
+									"key": "project",
+									"value": "Project 3",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "organisation",
+									"value": "Organisation 3",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test3@gmail.com",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update_With_File",
+					"request": {
+						"url": "https://csacangular.hsoftcloud.com/angularAPI/api/post/update/6",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI2ODIyNjAsImV4cCI6MTY2Mjc2ODY2MH0.Qx5o1HAvY3f8TAAKDjQf0rBID2oMBAJx9fbEzQ4EHeQf8xP5iB3k3vwErRi0tuCaM52OI9X2c1CQB2dOJSf_rQ",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Update title 1",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Body Update 1",
 									"description": "",
 									"type": "text"
 								},
@@ -586,27 +830,10 @@
 									"key": "files",
 									"description": "",
 									"type": "file",
-									"src": "nippon_01-2021_to_06-2022.pdf"
+									"src": "Doc1.docx"
 								}
 							]
 						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
-					"name": "DeletePost",
-					"request": {
-						"url": "http://localhost:8080/angularAPI/api/post/3",
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzYW50b3NoLnNhcmthckB0ZWxlY29tbWFuZC5jb20iLCJpYXQiOjE2NjI2OTEzNjksImV4cCI6MTY2Mjc3Nzc2OX0.RarJB3sdn2eM0fW2UZHQI5Pr8gtKGZpyvCLSU-VFupQPxb5uLnMfNOMM5GTXSx_gT8v9CysdO4AYEhtGg6c5fg",
-								"description": ""
-							}
-						],
-						"body": {},
 						"description": ""
 					},
 					"response": []

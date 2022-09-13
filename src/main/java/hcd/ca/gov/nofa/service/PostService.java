@@ -19,21 +19,36 @@ public class PostService {
 
     @Autowired
     private PostRepository repo;
-    
-    public List<Post> listAll() {		
-		return repo.findAll();
-	}
-	
-	public void save(Post post) {
-		repo.save(post);
-	}
-	
-	public Post get(Long id) {
-		return repo.findById(id).get();
-	}
-	
-	public void delete(Long id) {
-		repo.deleteById(id);
-	}
 
+    public List<Post> listAll() {
+        return repo.findAll();
+    }
+
+    public void save(Post product) {
+        repo.save(product);
+    }
+
+    public Post get(Long id) {
+        return repo.findById(id).get();
+    }
+
+    public void delete(Long id) {
+        repo.deleteById(id);
+    }
+
+//    public List<Post> listAll() {		
+//		return repo.findAll();
+//	}
+//	
+//	public void save(Post post) {
+//		repo.save(post);
+//	}
+//	
+//	public Post get(Long id) {
+//		return repo.findById(id).get();
+//	}
+//	
+//	public void delete(Long id) {
+//		repo.deleteById(id);
+//	}
 }

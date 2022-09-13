@@ -20,6 +20,7 @@ import java.net.URI;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -120,6 +121,7 @@ public class PostController {
     }
 
     //Update Post
+    /*
     @PutMapping("/{id}")
     public ResponseEntity<Object> updateStudent(@RequestBody Post post, @PathVariable long id) {
 
@@ -132,6 +134,18 @@ public class PostController {
         postRepository.save(post);
         //return ResponseEntity.noContent().build();
         return new ResponseEntity<>(HttpStatus.ACCEPTED);
+    }
+     */
+    @PutMapping("/{id}")
+    public ResponseEntity<?> update(@RequestBody Post post, @PathVariable Long id) {
+        try {
+            Post existProduct = service.get(id);
+            post.setId(id);
+            service.save(post);
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (NoSuchElementException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
     // Save Post With File
@@ -167,22 +181,53 @@ public class PostController {
 
     //Update Post with file
     @PostMapping("/update/{id}")
-    ResponseEntity<Object> updatePost(
-            Post post,
-            @PathVariable long id,
-            @RequestParam(value = "files", required = false) MultipartFile multipartFile
+    public ResponseEntity<Object> updatePost(Post post, @PathVariable Long id, @RequestParam(value = "files", required = false) MultipartFile multipartFile
     ) throws IOException {
 
         System.out.println("Inside Update");
+        try {
+            Post existProduct = service.get(id);
+            post.setId(id);
+            
+            String fileName = "";
+            if (multipartFile != null) {
+                fileName = StringUtils.cleanPath(multipartFile.getOriginalFilename());
+                System.out.println(fileName);
+                post.setFile(fileName);
 
-        Optional<Post> postOptional = postRepository.findById(id);
-        if (postOptional.isEmpty()) {
-            return ResponseEntity.notFound().build();
-        }
+            }  
+             //service.save(post);
+            Post savedPost = postRepository.save(post);
+            
+            if (multipartFile != null) {
+                PostFiles postFile = new PostFiles();
+                postFile.setPost(savedPost);
+                Long postFileId = postFilesRepository.getIdFromPostId(savedPost.getId());
+                System.out.println("PostFiles: " + postFileId);
+
+                postFile.setId(postFileId);
+                postFile.setFileName(fileName);
+                PostFiles savePostFiles = postFilesRepository.save(postFile);
+
+                String uploadDir = EXTERNAL_FILE_PATH + "files/" + savedPost.getId();
+                FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
+            } 
+            
+            return new ResponseEntity<>(HttpStatus.OK);
+        } catch (NoSuchElementException e) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }        
+        
+        /*
 
         try {
+            if (postOptional.isEmpty()) {
+                return ResponseEntity.notFound().build();
+            }
             System.out.println("Inside Try");
-            post.setId(id);           
+            
+            
+            post.setId(id);
 
             String fileName = "";
             if (multipartFile != null) {
@@ -192,27 +237,30 @@ public class PostController {
 
             }
             Post savedPost = postRepository.save(post);
-            
-            
+
             if (multipartFile != null) {
                 PostFiles postFile = new PostFiles();
-                postFile.setPost(savedPost);     
-                Long postFileId=postFilesRepository.getIdFromPostId(savedPost.getId());
-                System.out.println("PostFiles: "+postFileId);               
-                
+                postFile.setPost(savedPost);
+                Long postFileId = postFilesRepository.getIdFromPostId(savedPost.getId());
+                System.out.println("PostFiles: " + postFileId);
+
                 postFile.setId(postFileId);
                 postFile.setFileName(fileName);
-                PostFiles savePostFiles = postFilesRepository.save(postFile);                
-                        
+                PostFiles savePostFiles = postFilesRepository.save(postFile);
+
                 String uploadDir = EXTERNAL_FILE_PATH + "files/" + savedPost.getId();
                 FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
-            }
+            }           
 
             return ResponseHandler.generateResponse("Successfully Update data!", HttpStatus.OK, savedPost);
+            
+            
+            
         } catch (Exception e) {
             System.out.println("Inside Catch");
             return ResponseHandler.generateResponse(e.getMessage(), HttpStatus.MULTI_STATUS, null);
         }
+        */
 
     }
 

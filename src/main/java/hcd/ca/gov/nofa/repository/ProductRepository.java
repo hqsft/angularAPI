@@ -4,19 +4,13 @@
  */
 package hcd.ca.gov.nofa.repository;
 
-import hcd.ca.gov.nofa.entities.Post;
-import java.util.List;
-import java.util.Optional;
+import hcd.ca.gov.nofa.entities.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  *
  * @author santo
  */
-public interface PostRepository extends JpaRepository<Post, Long> {
-    
-    //Optional <Post> findById(Long id);
-
-    List<Post> findByPublished(boolean published);
-    List<Post> findByTitleContaining(String title);
+public interface ProductRepository extends JpaRepository<Product, Integer> {
+ 
 }
