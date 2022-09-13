@@ -211,7 +211,13 @@ public class PostController {
 
                 String uploadDir = EXTERNAL_FILE_PATH + "files/" + savedPost.getId();
                 FileUploadUtil.saveFile(uploadDir, fileName, multipartFile);
-            } 
+            } else{
+                Long postFileId = postFilesRepository.getIdFromPostId(savedPost.getId());
+                System.out.println("PostFiles: " + postFileId);
+                if(postFileId!=null){ 
+                postFilesRepository.deleteById(postFileId);
+                }
+            }
             
             return new ResponseEntity<>(HttpStatus.OK);
         } catch (NoSuchElementException e) {
